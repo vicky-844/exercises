@@ -4,16 +4,16 @@ import random
 st.set_page_config(page_title="Whoop Whoop", page_icon="👑", layout="wide",
                    initial_sidebar_state="auto") #menu_items=True
 
-#kleiner spaß zum monatsanfang (ist ein meme)
+# little fun at the beginning of the month (it's a meme)
 st.video("https://www.youtube.com/watch?v=tAhK0oyC-4o")
 st.divider()
 
-#header
+# header
 st.markdown("# Happy Birthday, Sascha!! 👑")
 st.markdown("*... Also zumindest nachträglich ✨🎈*")
 
 
-#birthday image
+# birthday image
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -26,7 +26,7 @@ with col3:
 st.divider()
 
 
-#glückwünsche zum b-day
+# b-day wishes
 st.markdown("## Lieber Sascha,")
 st.markdown("### Herzlichen Glückwunsch zu Deinem Geburtstag (nachträglich)! ✨")
 st.markdown("Wir wünschen Dir von ganzem Herzen:")
@@ -42,14 +42,16 @@ st.markdown("* ❤  Gesundheit (ganz, ganz wichtig!)\n"
 st.divider()
 
 
-#geburtstagslied
+# birthday song
 st.video("https://www.youtube.com/watch?v=HQ5EsTLFJxw")
 st.markdown("![Hab' eine schöne Feier!](https://www.youtube.com/watch?v=HQ5EsTLFJxw)")
 
 st.divider()
 
+#even more fun!
+st.markdown("### More Fun ✨✨")
 
-#geburtstagssprüche (liste)
+# some lists
 sprueche = [
     "Alles Gute zum Geburtstag! 🎂 Möge dein Jahr voller Glück und Freude sein!",
     "Herzlichen Glückwunsch! 🎈 Genieße deinen besonderen Tag in vollen Zügen!",
@@ -61,23 +63,6 @@ sprueche = [
     "Das Leben ist eine Reise – und Geburtstage sind schöne Zwischenstopps.",
 ]
 
-#nochmal zwei buttons
-
-col1, col2 = st.columns(2)
-
-with col1:
-    if st.button("Spruch gefällig? 🎁"):
-        spruch = random.choice(sprueche)
-        st.subheader(f"💬 {spruch}")
-
-with col2:
-    if st.button("Effekt gefällig? 🎈"):
-        st.balloons()
-
-
-st.divider()
-
-#hier ne witzige idee von ChatGPT
 meme_urls = [
     "https://a.pinatafarm.com/600x400/cda0b27da4/belated-birthday-a382d704c4c1510d45f8425b31f45bb2-meme.jpeg",
     "https://i.pinimg.com/736x/73/bf/f6/73bff648103271c9ab2a8e678db744c6.jpg",
@@ -93,9 +78,22 @@ meme_urls = [
     "https://i.pinimg.com/736x/71/f0/02/71f002d6326fbdfd17ebf53f44f5445d.jpg",
     ]
 
-if st.button("🤣 Zeig mir ein Geburtstags-Meme!"):
-    st.image(random.choice(meme_urls))
+# again some buttons
+col1, col2, col3 = st.columns(3)
 
+with col1:
+    if st.button("Spruch gefällig? 🎁"):
+        spruch = random.choice(sprueche)
+        st.subheader(f"💬 {spruch}")
 
+with col2:
+    if st.button("Effekt gefällig? 🎈"):
+        st.balloons()
+
+with col3:
+    if st.button("🤣 Zeig mir ein Geburtstags-Meme!"):
+        st.image(random.choice(meme_urls))
+
+st.divider()
 st.markdown("## 🎵 Ein letztes Lied zum Abschluss!")
 st.video("https://www.youtube.com/watch?v=CZ9WIZxhodo")
